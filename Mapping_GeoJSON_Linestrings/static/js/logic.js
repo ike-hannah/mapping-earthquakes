@@ -24,7 +24,7 @@ let baseMaps = {
 
 // Create the map object with center, zoom level and default layer.
 let map = L.map('mapid', {
-    center: [44, -80],
+    center: [30, 30],
     zoom: 2,
     layers: [streets]
 })
@@ -33,8 +33,7 @@ let map = L.map('mapid', {
 L.control.layers(baseMaps).addTo(map);
 
 // Accessing the Toronto airline routes GeoJSON URL.
-
-let torontoData = "https://raw.githubusercontent.com/ike-hannah/Mapping_Earthquakes/main/torontoRoutes.json";
+let torontoData = "https://raw.githubusercontent.com/ike-hannah/mapping-earthquakes/main/torontoRoutes%20(1).json";
 
 // Grabbing our GeoJSON data.
 d3.json(torontoData).then(function(data) {
